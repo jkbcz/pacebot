@@ -12,11 +12,11 @@ type ActionMilestone struct {
 }
 
 var milestones = []ActionMilestone{
-	{Date: lo.Must(time.Parse(time.RFC3339, "2025-02-01T00:00:00Z")), Milestone: 11},
-	{Date: lo.Must(time.Parse(time.RFC3339, "2025-03-01T00:00:00Z")), Milestone: 22},
-	{Date: lo.Must(time.Parse(time.RFC3339, "2025-04-01T00:00:00Z")), Milestone: 33},
-	{Date: lo.Must(time.Parse(time.RFC3339, "2025-05-01T00:00:00Z")), Milestone: 44},
-	{Date: lo.Must(time.Parse(time.RFC3339, "2025-06-01T00:00:00Z")), Milestone: 55},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-02-01T00:00:00Z")), Milestone: 11},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-03-01T00:00:00Z")), Milestone: 22},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-04-01T00:00:00Z")), Milestone: 33},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-05-01T00:00:00Z")), Milestone: 44},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-06-01T00:00:00Z")), Milestone: 55},
 	{Date: lo.Must(time.Parse(time.RFC3339, "2025-07-01T00:00:00Z")), Milestone: 66},
 }
 
