@@ -13,12 +13,13 @@ func (l *Logic) getStatusMessage(ctx context.Context, user pacebot.User) (pacebo
 	if err != nil {
 		return pacebot.StatusMessage{}, fmt.Errorf("cannot get user status: %w", err)
 	}
-
+	now := time.Now()
 	statusMessage := pacebot.StatusMessage{
-		CurrentStatus:   status.TransactionsAmount,
-		SeasonTarget:    status.Target,
-		Currency:        status.Currency,
-		MilestoneTarget: getStatusForNextMilestone(time.Now()),
+		CurrentStatus:       status.TransactionsAmount,
+		SeasonTarget:        status.Target,
+		AssistantPercentage: getAssistantPercentage(now),
+		Currency:            status.Currency,
+		MilestoneTarget:     getStatusForNextMilestone(now),
 
 		RegisterURL:   "https://app.myshare.today/registration",
 		DonateURL:     "https://donationbuk.no",

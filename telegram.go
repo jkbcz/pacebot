@@ -1,8 +1,9 @@
 package pacebot
 
 type StatusMessage struct {
-	CurrentStatus float64
-	SeasonTarget  float64
+	CurrentStatus       float64
+	SeasonTarget        float64
+	AssistantPercentage int
 
 	Currency string
 

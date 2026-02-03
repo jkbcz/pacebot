@@ -54,11 +54,21 @@ func (s *Service) getStatusMessage(content pacebot.StatusMessage) (string, tgbot
 
 	if missingAmount > 0 {
 		statusEmoji = "🔴"
-		statusMessage = fmt.Sprintf("Brakuje ci: <b>%.2f</b> %s\n", missingAmount, content.Currency)
+		statusMessage += fmt.Sprintf("\nBrakuje ci: <b>%.2f</b> %s\n", missingAmount, content.Currency)
+	}
+	if userPercent >= float64(content.AssistantPercentage) {
+		statusMessage += "\nMasz więcej procent ode mnie, czyli dostajesz dzisiaj <b>1</b> punkt!\n"
 	}
 
 	text := fmt.Sprintf(`
+Hej, tu Bob!
+
+Dzisiaj mam już <b>%d%%</b> i jestem na dobrej drodze, żeby w tym miesiącu być On Track.
+
 Cel na ten miesiąc: <b>%.2f%%</b>
+
+A Ty? 😏
+
 Twój Status: <b>%.2f%%</b> %s (%.2f / %.2f %s)
 %s
 <a href="%s">Zapisz się na Dugnad!</a>
@@ -66,6 +76,7 @@ Twój Status: <b>%.2f%%</b> %s (%.2f / %.2f %s)
 
 Dane z: %s
 `,
+		content.AssistantPercentage,
 		content.MilestoneTarget,
 		userPercent,
 		statusEmoji,
