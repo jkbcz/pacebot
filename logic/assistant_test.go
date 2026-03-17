@@ -1,7 +1,6 @@
 package logic
 
 import (
-	"fmt"
 	"testing"
 	"time"
 
@@ -10,7 +9,6 @@ import (
 )
 
 func TestAssistantPercentage(t *testing.T) {
-	fmt.Println(time.Now())
 	type testCase struct {
 		time       time.Time
 		percentage int
@@ -26,8 +24,9 @@ func TestAssistantPercentage(t *testing.T) {
 		{lo.Must(time.Parse(time.RFC3339, "2026-02-08T10:10:00+01:00")), 4},
 		{lo.Must(time.Parse(time.RFC3339, "2026-02-27T10:10:00+01:00")), 21},
 		{lo.Must(time.Parse(time.RFC3339, "2026-02-28T10:10:00+01:00")), 22},
-		{lo.Must(time.Parse(time.RFC3339, "2026-03-01T01:10:00+01:00")), 22},
-		{lo.Must(time.Parse(time.RFC3339, "2026-06-30T01:10:00+01:00")), 66},
+		{lo.Must(time.Parse(time.RFC3339, "2026-03-17T19:10:00+01:00")), 28},
+		{lo.Must(time.Parse(time.RFC3339, "2026-06-18T01:10:00+01:00")), 65},
+		{lo.Must(time.Parse(time.RFC3339, "2026-06-20T01:10:00+01:00")), 66},
 	}
 
 	for _, tc := range tcs {

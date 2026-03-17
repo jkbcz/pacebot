@@ -10,7 +10,12 @@ import (
 var assistantMilestones = []Milestone{
 	{Date: lo.Must(time.Parse(time.RFC3339, "2026-02-03T00:00:00Z")), Milestone: 0},
 	{Date: lo.Must(time.Parse(time.RFC3339, "2026-02-28T00:00:00Z")), Milestone: 22},
-	{Date: lo.Must(time.Parse(time.RFC3339, "2026-06-30T00:00:00Z")), Milestone: 66},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-03-17T00:00:00Z")), Milestone: 28},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-03-21T00:00:00Z")), Milestone: 33},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-04-25T00:00:00Z")), Milestone: 44},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-05-23T00:00:00Z")), Milestone: 55},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-06-20T00:00:00Z")), Milestone: 66},
+	{Date: lo.Must(time.Parse(time.RFC3339, "2026-07-05T00:00:00Z")), Milestone: 72},
 }
 
 func getAssistantPercentage(time time.Time) int {
