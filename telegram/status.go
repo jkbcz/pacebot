@@ -56,9 +56,6 @@ func (s *Service) getStatusMessage(content pacebot.StatusMessage) (string, tgbot
 		statusEmoji = "🔴"
 		statusMessage += fmt.Sprintf("\nBrakuje ci: <b>%.2f</b> %s\n", missingAmount, content.Currency)
 	}
-	if userPercent >= float64(content.AssistantPercentage) {
-		statusMessage += "\nMasz więcej procent ode mnie, czyli dostajesz dzisiaj <b>1</b> punkt!\n"
-	}
 
 	text := fmt.Sprintf(`
 Hej, tu Bob!
